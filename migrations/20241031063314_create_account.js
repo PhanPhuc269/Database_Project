@@ -1,7 +1,7 @@
 // migrations/xxxx_create_account.js
 exports.up = function(knex) {
     return knex.schema.createTable('ACCOUNT', (table) => {
-      table.integer('EMPLOYEE_ID').primary();
+      table.increments('EMPLOYEE_ID');
       table.string('EMP_NAME', 40).notNullable();
       table.string('EMP_ROLE', 40);
       table.integer('ACCESS_LEVEL');

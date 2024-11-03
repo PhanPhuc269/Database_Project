@@ -1,7 +1,7 @@
 // migrations/xxxx_create_orders.js
 exports.up = function(knex) {
     return knex.schema.createTable('ORDERS', (table) => {
-      table.integer('ORDER_ID').primary();
+      table.increments('ORDER_ID').primary();
       table.integer('CUSTOMER_ID').references('CUSTOMER_ID').inTable('CUSTOMERS');
       table.integer('RESERVED_TABLE_ID').references('RESERVED_TABLE_ID').inTable('RESERVED_TABLE');
       table.datetime('ORDER_TIME');

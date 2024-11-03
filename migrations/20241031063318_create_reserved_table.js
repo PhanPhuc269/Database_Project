@@ -1,7 +1,7 @@
 // migrations/xxxx_create_reserved_table.js
 exports.up = function(knex) {
     return knex.schema.createTable('RESERVED_TABLE', (table) => {
-      table.integer('RESERVED_TABLE_ID').primary();
+      table.increments('RESERVED_TABLE_ID');
       table.integer('TABLE_ID');
       table.boolean('IS_RESERVED');
       table.datetime('RESERVATION_TIME');

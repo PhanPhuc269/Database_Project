@@ -1,7 +1,7 @@
 // migrations/xxxx_create_material.js
 exports.up = function(knex) {
     return knex.schema.createTable('MATERIAL', (table) => {
-      table.integer('ID').primary();
+      table.increments('ID');
       table.string('MATERIAL_NAME', 40);
       table.integer('STOCK');
       table.datetime('EXP_DATE');
